@@ -10,7 +10,6 @@ body {
     padding: 0;
 }
 
-/* Кнопка открытия формы */
 #openFeedback {
     display: block;
     margin: 150px auto;
@@ -23,7 +22,6 @@ body {
     cursor: pointer;
 }
 
-/* затемнение фона */
 .popup-bg {
     position: fixed;
     inset: 0;
@@ -37,7 +35,6 @@ body {
     display: flex;
 }
 
-/* окно формы */
 .popup-content {
     background: white;
     padding: 25px;
@@ -88,10 +85,8 @@ body {
 
 <button id="openFeedback">Открыть форму</button>
 
-<!-- глобальное сообщение -->
 <div id="globalMessage"></div>
 
-<!-- POPUP -->
 <div id="popup" class="popup-bg">
     <div class="popup-content">
         <button id="closePopup" style="float:right;">✖</button>
@@ -117,7 +112,7 @@ body {
 </div>
 
 <script>
-// Ваш Formcarry ID
+//ID
 const FORM_URL = "https://formcarry.com/s/DNrd1XjUsiT";
 
 const popup = document.getElementById("popup");
@@ -138,7 +133,7 @@ const fields = {
 
 const STORAGE_KEY = "form_data";
 
-/* Телефон только цифры и + */
+/* Телефон */
 fields.phone.addEventListener("input", () => {
     fields.phone.value = fields.phone.value.replace(/[^0-9+]/g, "");
 });
@@ -225,4 +220,5 @@ form.addEventListener("submit", async (e)=>{
 });
 </script>
 </body>
+
 </html>
